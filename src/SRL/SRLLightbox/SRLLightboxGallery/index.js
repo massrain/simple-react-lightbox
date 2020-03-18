@@ -425,7 +425,7 @@ const SRLLightboxGallery = ({
       ref={SRLStageRef}
       overlayColor={options.overlayColor}
     >
-      <SRLLightboxControls {...buttonOptions} {...controls} />
+      <SRLLightboxControls {...buttonOptions} {...controls} options={options} />
       <SRLLightboxSlideComponent
         {...currentElement}
         {...controls}

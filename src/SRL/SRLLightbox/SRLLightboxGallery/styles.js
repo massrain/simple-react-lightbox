@@ -294,6 +294,11 @@ const SRLLLightboxTopButtons = styled.div`
 const SRRLLightboxCloseIcon = styled(StyledButton)`
   position: relative;
 `
+// The "share" button
+const SRLLightboxShareIcon = styled(StyledButton)`
+  position: relative;
+  margin-right: 5px;
+`
 
 // The "close" button
 const SRRLExpandIcon = styled(StyledButton)`
@@ -390,6 +395,7 @@ export {
   SRLLightboxVideo,
   SRRLLightboxCaption,
   SRRLLightboxCloseIcon,
+  SRLLightboxShareIcon,
   SRLLightboxNextIcon,
   SRLLightboxPrevIcon,
   SRRLLightboxAutoplayIcon,

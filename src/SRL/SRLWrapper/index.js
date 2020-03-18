@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
 import { SRLCtx } from '../SRLContext'
-import imagesLoaded from 'imagesLoaded'
+import imagesLoaded from 'imagesloaded'
 
 const SRLWrapper = ({
   options,
@@ -239,6 +239,7 @@ SRLWrapper.propTypes = {
     hideControlsAfter: PropTypes.number,
     overlayColor: PropTypes.string,
     showCaption: PropTypes.bool,
+    customFunc: PropTypes.func,
     showThumbnails: PropTypes.bool,
     slideTransitionSpeed: PropTypes.number,
     thumbnailsOpacity: PropTypes.number,
@@ -274,6 +275,7 @@ SRLWrapper.defaultProps = {
     hideControlsAfter: 3000,
     overlayColor: 'rgba(0, 0, 0, 0.9)',
     showCaption: true,
+    customFunc: () => console.log("srlwrapper propsdan gelen"),
     showThumbnails: true,
     slideTransitionSpeed: 600,
     thumbnailsOpacity: 0.4,

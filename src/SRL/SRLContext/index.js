@@ -19,6 +19,7 @@ const initialState = {
     hideControlsAfter: 3000,
     overlayColor: 'rgba(0, 0, 0, 0.9)',
     showCaption: true,
+    customFunc: () => console.log("ctxden gelen"),
     showThumbnails: true,
     slideTransitionSpeed: 600,
     thumbnailsOpacity: 0.4,

@@ -186,6 +186,7 @@ function SRLLightboxSlideComponent({
             event.target.classList.contains('SRLCloseButton') ||
             event.target.classList.contains('SRLAutoplayButton') ||
             event.target.classList.contains('SRLExpandButton') ||
+            event.target.classList.contains('SRLCustomButton') ||
             event.target.classList.contains('SRLZoomOutButton') ||
             event.target.classList.contains('SRLThumbnails') ||
             event.target.classList.contains('SRLThumb') ||
@@ -254,6 +255,7 @@ SRLLightboxSlideComponent.propTypes = {
     enablePanzoom: PropTypes.bool,
     overlayColor: PropTypes.string,
     showCaption: PropTypes.bool,
+    customFunc: PropTypes.func,
     showThumbnails: PropTypes.bool,
     slideTransitionSpeed: PropTypes.number,
     thumbnailsOpacity: PropTypes.number,

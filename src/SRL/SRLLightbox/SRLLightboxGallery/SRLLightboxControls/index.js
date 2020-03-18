@@ -7,7 +7,8 @@ import {
   SRLLLightboxTopButtons,
   SRRLLightboxAutoplayIcon,
   SRRLExpandIcon,
-  SRLZoomOutIcon
+  SRLZoomOutIcon,
+  SRLLightboxShareIcon
 } from '../styles'
 
 const SRLLightboxControls = ({
@@ -18,6 +19,7 @@ const SRLLightboxControls = ({
   autoplay,
   autoplaySpeed,
   setAutoplay,
+  options,
   currentElementID,
   buttonsBackgroundColor,
   buttonsIconColor,
@@ -29,6 +31,29 @@ const SRLLightboxControls = ({
   return (
     <>
       <SRLLLightboxTopButtons>
+        <SRLLightboxShareIcon
+          buttonsBackgroundColor={buttonsBackgroundColor}
+          buttonsIconColor={buttonsIconColor}
+          buttonsSize={buttonsSize}
+          buttonsIconPadding={buttonsIconPadding}
+          autoplaySpeed={autoplaySpeed}
+          title="Share"
+          className="SRLCustomButton"
+          onClick={options.customFunc}
+        >
+          <div className="SRLCustomButton">
+            <svg
+              className="SRLCustomButton"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 50 50"
+            >
+              <path
+                className="SRLCustomButton"
+                d="M35.7 22.8L16.9 11.6c-1.5-.9-3.9 0-3.9 2.2v22.3c0 2 2.2 3.2 3.9 2.2l18.9-11.1c1.6-1 1.6-3.4-.1-4.4zm-.8 2.9L16 36.9c-.6.3-1.3-.1-1.3-.7V13.8c0-.9.9-1 1.3-.7l18.9 11.1c.5.4.5 1.2 0 1.5z"
+              />
+            </svg>
+          </div>
+        </SRLLightboxShareIcon>
         <SRRLLightboxAutoplayIcon
           buttonsBackgroundColor={buttonsBackgroundColor}
           buttonsIconColor={buttonsIconColor}
@@ -196,6 +221,7 @@ SRLLightboxControls.propTypes = {
   setAutoplay: PropTypes.func,
   autoplay: PropTypes.bool,
   autoplaySpeed: PropTypes.number,
+  options: PropTypes.object,
   currentElementID: PropTypes.string,
   buttonsBackgroundColor: PropTypes.string,
   buttonsIconColor: PropTypes.string,
